@@ -36,7 +36,7 @@ export const LoginButton = () => {
         'text-green-600 hover:text-green-700': isLogged,
         'text-red-500 hover:text-red-600': !isLogged,
       })}
-      // onClick={onKeyIconClick}
+      onClick={onKeyIconClick}
     >
       <KeyIcon />
     </button>

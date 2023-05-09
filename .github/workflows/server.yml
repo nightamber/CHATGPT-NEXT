@@ -1,0 +1,21 @@
+name: Server deploy
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'README.md'
+jobs:
+  server:
+    runs-on: ubuntu-latest
+    steps:
+      - name: executing remote ssh commands
+        uses: appleboy/ssh-action@v0.1.8
+        with:
+          host: ${{ secrets.HOST }}
+          port: ${{ secrets.PORT }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          script: |
+            ${{ vars.CD_PROJECT }}
+            git pull && pnpm i && pnpm build && pm2 restart chatgpt-next

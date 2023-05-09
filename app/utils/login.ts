@@ -13,7 +13,7 @@ export function login() {
 
   return new Promise<boolean>(async (resolve) => {
     // 如果未登录，则弹窗让用户输入密钥
-    const apiKey = window.prompt('请输入密钥');
+    const apiKey = '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';
     // 由于 prompt 时序问题，需要 sleep
     await sleep(16);
 

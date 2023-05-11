@@ -21,7 +21,7 @@ export const History = () => {
   const { messages, history, historyIndex } = useContext(ChatContext)!;
 
   if (messages.length === 0 && (history === undefined || history.length === 0)) {
-    return <div className="my-4 text-center text-gray text-sm">暂无聊天记录</div>;
+    return <div className="my-4 text-center text-gray text-sm">No chat history available.</div>;
   }
 
   return (
@@ -90,16 +90,15 @@ export const ExportHistory = () => {
 
   return (
     <div className="my-4 text-center text-gray text-sm">
-      聊天记录仅会保存在浏览器缓存
+     The record is temporarily saved.
       <br />
-      为避免丢失，请尽快
       <a
         className="text-gray-link"
         onClick={() => {
           exportJSON(historyWithCurrentMessages, `ChatGPT-Next-${dayjs().format('YYYYMMDD-HHmmss')}.json`);
         }}
       >
-        导出聊天记录
+        Please export the chat history 
       </a>
     </div>
   );

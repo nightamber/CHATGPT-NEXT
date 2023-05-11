@@ -201,11 +201,10 @@ const MenuFooter = () => {
       className={`flex-none px-4 py-5 text-center text-gray text-sm border-t-[0.5px] border-gray
                   pb-[calc(1.25rem+env(safe-area-inset-bottom))]`}
     >
-      由{' '}
+      {' '}
       <a className="text-gray-link" href="https://www.artefact.com/" target="_blank">
         Artefact Tech
       </a>{' '}
-      技术支持
     </div>
   );
 };

@@ -11,13 +11,13 @@ import { Message, SystemMessage } from './Message';
 
 const SYSTEM_MESSAGE = (
   <>
-    本页面会将数据发送给 OpenAI
+    This page will send data to OpenAI.
     <br />
-    请注意隐私风险，禁止发送违法内容
+    Please be aware of the privacy risks, and refrain from sending any illegal content.
   </>
 );
-const WELCOME_MESSAGE = '你好！有什么我可以帮助你的吗？';
-const LOADING_MESSAGE = '正在努力思考...';
+const WELCOME_MESSAGE = 'Hello! How can I assist you?';
+const LOADING_MESSAGE = 'thinking.....';
 
 export const Messages = () => {
   let { isLoading, messages, history, historyIndex, startNewChat } = useContext(ChatContext)!;
